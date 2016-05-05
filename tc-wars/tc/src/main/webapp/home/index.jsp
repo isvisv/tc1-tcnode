@@ -36,19 +36,19 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=us-ascii" />
 	<meta http-equiv="Refresh" content="0; URL=http://www.topcoder.com/">
 	<!-- External CSS -->
-	<link href="./css/home/homepage.css" rel="stylesheet" type="text/css" />
+	<link href="/css/home/homepage.css" rel="stylesheet" type="text/css" />
 	<!--[if IE 6]>
-	<link rel="stylesheet" type="text/css" media="screen" href="./css/home/homepage-ie6.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="/css/home/homepage-ie6.css" />
 	<![endif]-->
 	
 	<!-- External javascript -->
-	<script type="text/javascript" src="./js/home/jquery-1.4.2.min.js">
+	<script type="text/javascript" src="/js/home/jquery-1.4.2.min.js">
 	</script>
-	<script type="text/javascript" src="./js/home/jquery.selectbox-0.5.js">
+	<script type="text/javascript" src="/js/home/jquery.selectbox-0.5.js">
 	</script>
-	<script type="text/javascript" src="./js/home/jquery.jfeed.pack.js">
+	<script type="text/javascript" src="/js/home/jquery.jfeed.pack.js">
 	</script>
-	<script type="text/javascript" src="./js/home/initSlider.js">
+	<script type="text/javascript" src="/js/home/initSlider.js">
 	</script>
 </head>
 <body>
