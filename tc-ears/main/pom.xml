@@ -1017,6 +1017,11 @@
             <artifactId>class_associations</artifactId>
             <version>1.0.0</version>
         </dependency>
+        <dependency>
+            <groupId>com.sun.xml.bind</groupId>
+            <artifactId>jaxb-impl</artifactId>
+            <version>2.1.13</version>
+        </dependency>
 
 
         <!-- Libraries not to be included into EAR file -->
