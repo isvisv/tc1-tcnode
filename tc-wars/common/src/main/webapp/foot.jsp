@@ -23,7 +23,10 @@
         handle = sessionInfo.getHandle();
     }
 
-    String domainName = ApplicationServer.SERVER_NAME.replace("www.", "");
+    String domainName = ApplicationServer.SERVER_NAME;
+    if (domainName.startsWith("www.")) {
+        domainName = domainName.substring(4);
+    }
 
 %>
 

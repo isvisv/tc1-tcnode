@@ -42,7 +42,10 @@
     if (nextpage == null) nextpage = request.getHeader("Referer");
     if (nextpage == null) nextpage = "http://" + request.getServerName();
 
-    String domainName = ApplicationServer.SERVER_NAME.replace("www.", "");
+    String domainName = ApplicationServer.SERVER_NAME;
+    if (domainName.startsWith("www.")) {
+        domainName = domainName.substring(4);
+    }
 
 //    String currentPageURL = request.getRequestURL().toString() + (request.getQueryString() == null ? "" : ("?" + request.getQueryString().toString()));
     

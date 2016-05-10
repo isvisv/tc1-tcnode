@@ -27,8 +27,8 @@
             </plugin>
             <plugin>
                 <artifactId>maven-ear-plugin</artifactId>
+                <version>2.10.1</version>
                 <configuration>
-                    <version>1.4</version>
                     <modules>
                         <ejbModule>
                             <groupId>topcoder</groupId>
@@ -243,6 +243,12 @@
                         </webModule>
                         <webModule>
                             <groupId>topcoder</groupId>
+                            <artifactId>topcoder-war-reg2</artifactId>
+                            <bundleFileName>reg2.war</bundleFileName>
+                            <contextRoot>/reg2</contextRoot>
+                        </webModule>
+                        <webModule>
+                            <groupId>topcoder</groupId>
                             <artifactId>topcoder-war-corp</artifactId>
                             <bundleFileName>corp.war</bundleFileName>
                             <contextRoot>/corp</contextRoot>
@@ -257,7 +263,7 @@
                             <groupId>topcoder</groupId>
                             <artifactId>topcoder-war-tc</artifactId>
                             <bundleFileName>tc.war</bundleFileName>
-                            <contextRoot>/tc</contextRoot>
+                            <contextRoot>/</contextRoot>
                         </webModule>
                         <webModule>
                             <groupId>topcoder</groupId>
@@ -529,6 +535,12 @@
         <dependency>
             <groupId>topcoder</groupId>
             <artifactId>topcoder-war-reg</artifactId>
+            <version>1.0-SNAPSHOT</version>
+            <type>war</type>
+        </dependency>
+        <dependency>
+            <groupId>topcoder</groupId>
+            <artifactId>topcoder-war-reg2</artifactId>
             <version>1.0-SNAPSHOT</version>
             <type>war</type>
         </dependency>
@@ -1021,6 +1033,16 @@
             <groupId>com.sun.xml.bind</groupId>
             <artifactId>jaxb-impl</artifactId>
             <version>2.1.13</version>
+        </dependency>
+        <dependency>
+            <groupId>netscape.ldap</groupId>
+            <artifactId>netscape.ldap</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+        <dependency>
+            <groupId>opensymphony</groupId>
+            <artifactId>xwork</artifactId>
+            <version>1.0.3</version>
         </dependency>
 
 

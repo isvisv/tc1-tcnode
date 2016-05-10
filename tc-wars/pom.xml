@@ -23,6 +23,7 @@
         <module>corp</module>
         <module>privatelabel</module>
         <module>reg</module>
+        <module>reg2</module>
         <module>ep</module>
         <module>distui</module>
     </modules>
