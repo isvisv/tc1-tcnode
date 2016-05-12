@@ -48,7 +48,7 @@
     
     
         <div id="popUp2" class="popUp"> 
-            <div style="width: 400px; white-space: normal;">Compete in competitions ranging from graphic design, information architecture, mobile app design, UX and UI, logos, print and more! Have the opportunity to design for big-name clients and compete against designers from across the globe. Studio competitions give you several ways to win with multi-round competitions and you’ll be eligible to win even more in the monthly tournament called the Studio Cup. Finally, compete among the best designers in the world for a chance to become a finalist in our annual global onsite tournament called the TCO where designers compete for cash prizes and prestige!</div> 
+            <div style="width: 400px; white-space: normal;">Compete in competitions ranging from graphic design, information architecture, mobile app design, UX and UI, logos, print and more! Have the opportunity to design for big-name clients and compete against designers from across the globe. Studio competitions give you several ways to win with multi-round competitions and youï¿½ll be eligible to win even more in the monthly tournament called the Studio Cup. Finally, compete among the best designers in the world for a chance to become a finalist in our annual global onsite tournament called the TCO where designers compete for cash prizes and prestige!</div> 
         </div> 
     
     
@@ -114,7 +114,7 @@
 				</div>
 				<h2 class="registeredMember">What would you like to do as a registered TopCoder member?<span class="hint">(check all that apply)</span><span class="end">&nbsp;</span></h2>
 				<div class="content-body">
-					<form action="${sessionInfo.secureAbsoluteServletPath}" method="POST" name="selectionForm">
+					<form action="${sessionInfo.absoluteServletPath}" method="POST" name="selectionForm">
 						<ul class="chooseForm">
 							<tc-webtag:hiddenInput name="<%=Constants.MODULE_KEY%>" value="Main"/>
 							<c:set value="<%=Constants.REGISTRATION_TYPE%>" var="regType"/>

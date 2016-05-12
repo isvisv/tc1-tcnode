@@ -58,9 +58,7 @@
                 <module>tc-legacy-apps</module>
                 <module>tc-main</module>
                 <module>tc-wars</module>
-                <module>tc-wars/static</module>
                 <module>tc-ears/main</module>
-                <module>tc-ears/static</module>
             </modules>
 
             <properties>
@@ -133,20 +131,63 @@
         <profile>
             <id>deploy</id>
             <build>
-                <pluginManagement>
-                    <plugins>
-                        <plugin>
-                            <groupId>org.codehaus.mojo</groupId>
-                            <artifactId>jboss-maven-plugin</artifactId>
-                            <version>1.4.1</version>
-                            <configuration>
-                                <jbossHome>${jboss-home}</jbossHome>
-                                <serverName>all</serverName>
-                                <fileNames>tc-ears/main/target/tc.ear,tc-ears/security/target/security.ear,tc-ears/static/target/static.ear</fileNames>
-                            </configuration>
-                        </plugin>
-                    </plugins>
-                </pluginManagement>
+                <plugins>
+                    <plugin>
+                        <groupId>org.codehaus.mojo</groupId>
+                        <artifactId>jboss-maven-plugin</artifactId>
+                        <version>1.4.1</version>
+                        <configuration>
+                            <jbossHome>${jboss-home}</jbossHome>
+                            <serverName>all</serverName>
+                            <fileNames>
+                                tc-ears/main/target/tc.ear,tc-ears/security/target/security.ear,tc-ears/main/src/main/resources/tc_informix-ds.xml
+                            </fileNames>
+                        </configuration>
+                    </plugin>
+
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-resources-plugin</artifactId>
+                        <version>2.7</version>
+                        <configuration>
+                            <outputDirectory>${jboss-home}/server/all/conf</outputDirectory>
+                            <resources>
+                                <resource>
+                                    <directory>tc-ears/main/src/main/resources</directory>
+                                    <excludes>
+                                        <exclude>tc_informix-ds.xml</exclude>
+                                        <exclude>topcoderLDAPDBSync-service.xml</exclude>
+                                    </excludes>
+                                </resource>
+                            </resources>
+                        </configuration>
+                    </plugin>
+                    
+                </plugins>
+            </build>
+        </profile>
+        <profile>
+            <id>init</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-resources-plugin</artifactId>
+                        <version>2.7</version>
+                        <configuration>
+                            <outputDirectory>${jboss-home}/server/all/lib</outputDirectory>
+                            <resources>
+                                <resource>
+                                    <directory>tc-maven\com\informix\jdbc\com.informix.jdbc\1.0.0</directory>
+                                    <includes>
+                                        <include>com.informix.jdbc-1.0.0.jar</include>
+                                    </includes>
+                                </resource>
+                            </resources>
+                        </configuration>
+                    </plugin>
+
+                </plugins>
             </build>
         </profile>
     </profiles>
